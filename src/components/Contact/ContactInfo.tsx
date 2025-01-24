@@ -86,10 +86,10 @@ const ContactInfo: React.FC = () => {
               Mail address
             </h3>
             <a
-              href="mailto:contact@zeetechusa3pl.com"
+              href="mailto:northpolegateway@yahoo.com"
               className="text-white"
             >
-              contact@zeetechusa3pl.com
+              northpolegateway@yahoo.com
             </a>
           </div>
         </div>
