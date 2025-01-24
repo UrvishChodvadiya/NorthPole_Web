@@ -76,7 +76,7 @@ const ContactForm: React.FC = () => {
 
     emailjs
       .send(
-        "service_tdgukvd",  //services id for yahoo email
+        "service_k2ubbzh",  //services id for north pole only email
         "template_fd07zur",
         { ...formData, service: formData.service.join(", ") },
         "oh27zx6byWADNK1n7"
