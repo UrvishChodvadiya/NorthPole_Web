@@ -52,7 +52,8 @@ export default function ServicesSection() {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "url('https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/Northpole%2FServices1.webp?alt=media&token=5d6abf5e-16f9-4fc1-84a4-2596163d222f')",
+              "url('https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/ServicesHome1.webp')",
+              // https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/Northpole%2FServices1.webp?alt=media&token=5d6abf5e-16f9-4fc1-84a4-2596163d222f
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundAttachment: "fixed"

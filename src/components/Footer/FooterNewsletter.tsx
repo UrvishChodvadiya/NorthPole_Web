@@ -12,9 +12,9 @@ export default function FooterNewsletter() {
     e.preventDefault();
     setLoading(true);
     // EmailJS configuration
-    const serviceID = "service_4sl1kt3";
-    const templateID = "template_9jtuqah";
-    const userID = "sfzP8dARsTfHsyPE9";
+    const serviceID = "service_3xsbzui"; // Northpolegateway email services
+    const templateID = "template_x6up23u";   
+    const userID = "CKlwW3VmCwV9Rd_te";
 
     emailjs.send(serviceID, templateID, { email }, userID).then(
       (response) => {
@@ -41,7 +41,9 @@ export default function FooterNewsletter() {
       className="bg-teal-900 px-7 py-2 rounded-lg shadow-lg flex flex-col md:flex-row items-center justify-between bg-cover bg-center mb-4"
       style={{
         backgroundImage:
-          "url('https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/bg-ft.webp?alt=media&token=2fa160c1-2710-408d-849a-8dac4e59a643')"
+          "url('https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/bg-ft.webp')"
+          // https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/bg-ft.webp?alt=media&token=2fa160c1-2710-408d-849a-8dac4e59a643
+
       }}
     >
       <div className="mb-6 md:mb-0 w-full md:w-auto">

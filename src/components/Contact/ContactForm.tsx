@@ -76,10 +76,10 @@ const ContactForm: React.FC = () => {
 
     emailjs
       .send(
-        "service_xlp9o7o",
-        "template_qovop2a",
+        "service_tdgukvd",  //services id for yahoo email
+        "template_fd07zur",
         { ...formData, service: formData.service.join(", ") },
-        "sfzP8dARsTfHsyPE9"
+        "oh27zx6byWADNK1n7"
       )
       .then(
         (response) => {

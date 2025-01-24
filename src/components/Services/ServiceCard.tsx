@@ -6,10 +6,13 @@ interface ServiceCardProps {
   icon: React.ReactNode;
   title: string;
   description: string;
-
 }
 
-export default function ServiceCard({ icon, title, description }: ServiceCardProps) {
+export default function ServiceCard({
+  icon,
+  title,
+  description
+}: ServiceCardProps) {
   return (
     <motion.div
       whileHover={{ y: -10 }}
@@ -20,7 +23,7 @@ export default function ServiceCard({ icon, title, description }: ServiceCardPro
         className="absolute inset-0 transition-opacity duration-300"
         style={{
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "center"
         }}
       ></div>
 
@@ -28,9 +31,10 @@ export default function ServiceCard({ icon, title, description }: ServiceCardPro
       <div
         className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
         style={{
-          backgroundImage: `url('https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/bg-icb.png?alt=media&token=c58dd774-3164-41e0-835f-3c4b5569736d')`,
+          backgroundImage: `url('https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/bg-icb.png')`,
+          // https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/bg-icb.png?alt=media&token=c58dd774-3164-41e0-835f-3c4b5569736d
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "center"
         }}
       ></div>
 
@@ -52,9 +56,7 @@ export default function ServiceCard({ icon, title, description }: ServiceCardPro
         </p>
 
         <div className="flex items-center space-x-2 transition-colors duration-300">
-          <span
-            className="inline-flex items-center text-white bg-orange-500 p-2 rounded-full group-hover:bg-orange-500 transition-all duration-300"
-          >
+          <span className="inline-flex items-center text-white bg-orange-500 p-2 rounded-full group-hover:bg-orange-500 transition-all duration-300">
             <ArrowRight className="h-5 w-5" />
           </span>
           <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">

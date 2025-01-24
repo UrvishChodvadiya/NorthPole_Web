@@ -14,8 +14,9 @@ function PricingHero() {
         {/* First section */}
         <div className="relative h-[200px] sm:h-[200px] lg:h-[300px] bg-gradient-to-r from-gray-900 to-gray-800 overflow-hidden">
           <div className="absolute inset-0">
+          {/* https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80 */}
             <img
-              src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"
+              src="https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/pricing.jpg"
               alt="Scenic view of a city skyline with a sunset, representing pricing plans"
               className="w-full h-full object-cover opacity-30"
             />

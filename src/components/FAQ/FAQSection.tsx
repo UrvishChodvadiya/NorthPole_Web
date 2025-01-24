@@ -6,7 +6,8 @@ export default function FAQSection() {
     <section
       className="relative w-full py-15 overflow-hidden flex items-center justify-center"
       style={{
-        backgroundImage: `url('https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/Northpole%2Fh13.jpg?alt=media&token=d63a09cf-e805-45bd-a0d9-69e3de14f7ef')`,
+        backgroundImage: `url('https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/h13.jpg')`,
+        // https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/Northpole%2Fh13.jpg?alt=media&token=d63a09cf-e805-45bd-a0d9-69e3de14f7ef
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat"

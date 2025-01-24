@@ -8,7 +8,8 @@ export const GetRate: React.FC = () => (
     className="bg-[#115361] bg-opacity-80 py-3 px-9 text-white w-full"
     style={{
       backgroundImage:
-        "url('https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/bg-ft.webp?alt=media&token=2fa160c1-2710-408d-849a-8dac4e59a643')",
+        "url('https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/bg-ft.webp')",
+        // https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/bg-ft.webp?alt=media&token=2fa160c1-2710-408d-849a-8dac4e59a643
       backgroundSize: "cover",
       backgroundPosition: "center"
     }}

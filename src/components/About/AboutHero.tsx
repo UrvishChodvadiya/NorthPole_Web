@@ -28,7 +28,8 @@ export default function AboutHero() {
       <div className="relative h-[200px] sm:h-[200px] lg:h-[300px] bg-gradient-to-r from-gray-900 to-gray-800 overflow-hidden font-poppins">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"
+            src=" https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/pricing.jpg"
+            // https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80
             alt="About Us"
             className="w-full h-full object-cover opacity-30"
           />
@@ -104,7 +105,8 @@ export default function AboutHero() {
             >
               <div className="relative overflow-hidden aspect-square rounded-xl">
                 <img
-                  src="https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/service-details-01.jpg?alt=media&token=d0d02953-05c4-4b3c-a0c6-3b8e80d45cb9"
+                  src="https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/service-details-01.jpg"
+                  // https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/service-details-01.jpg?alt=media&token=d0d02953-05c4-4b3c-a0c6-3b8e80d45cb9
                   alt="Warehouse"
                   className="w-full h-full object-cover"
                 />

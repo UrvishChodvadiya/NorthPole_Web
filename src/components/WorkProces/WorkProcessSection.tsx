@@ -8,8 +8,8 @@ const steps = [
     title: "Step 1:  Strategic Storage Solutions",
     description:
       "At NorthPole Gateway, we begin by assessing your storage needs to create a customized solution. Our flexible, secure storage options and advanced technology optimize space, inventory management, and accessibility.",
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/WorkP1.webp?alt=media&token=12d49599-1144-4553-808a-aaa08df6e988",
+    image:"https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/WorkP1.webp",
+      // https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/WorkP1.webp?alt=media&token=12d49599-1144-4553-808a-aaa08df6e988
     alt: "Strategic Storage Solutions"
   },
   {
@@ -17,8 +17,8 @@ const steps = [
     title: "Step 2: Precision Order Fulfillment",
     description:
       "Once storage is optimized, we move to the order preparation stage. At NorthPole Gateway, we ensure accurate picking, packing, and labeling of your products, using efficient processes and real-time tracking to guarantee timely and error-free order fulfillment.",
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/WorkP2.webp?alt=media&token=c236ffc1-0398-4059-ae2c-b974143a6c95",
+    image:"https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/WorkP2.webp",
+      // https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/WorkP2.webp?alt=media&token=c236ffc1-0398-4059-ae2c-b974143a6c95
     alt: "Precision Order Fulfillment"
   },
   {
@@ -26,8 +26,8 @@ const steps = [
     title: "Step 3: Reliable Distribution Network",
     description:
       "After preparing the order, we focus on timely and secure shipping. NorthPole Gateway ensures fast, reliable delivery through trusted logistics partners, tracking shipments every step of the way to ensure your products reach their destination on time.",
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/WorkP3.webp?alt=media&token=1b9de38c-4054-4a90-aff2-dbaf335d2169",
+    image:"https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/WorkP3.webp",
+      // https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/WorkP3.webp?alt=media&token=1b9de38c-4054-4a90-aff2-dbaf335d2169
     alt: "Reliable Distribution Network"
   }
 ];
@@ -48,7 +48,8 @@ export default function WorkProcessSection() {
       className="py-24 relative overflow-hidden bg-gradient-to-b from-white to-gray-50"
       style={{
         backgroundImage:
-          "url('https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/bg_workprocess.jpg?alt=media&token=de050f80-b1b9-4430-bfa3-1eb64899add5')",
+          "url('https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/bg_workprocess.jpg')",
+          // https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/bg_workprocess.jpg?alt=media&token=de050f80-b1b9-4430-bfa3-1eb64899add5
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat"

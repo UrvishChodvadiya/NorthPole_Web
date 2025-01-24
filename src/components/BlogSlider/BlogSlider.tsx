@@ -5,7 +5,8 @@ const blogs = [
   {
     title: "Innovations in last-mile delivery operations",
     image:
-      "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/post6.jpg?alt=media&token=1eb0508b-be41-47a3-904e-5478daadc22f",
+      "https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/post6.jpg",
+      // https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/post6.jpg?alt=media&token=1eb0508b-be41-47a3-904e-5478daadc22f
     excerpt:
       "Discover how AI and automation are revolutionizing the logistics industry",
     date: "Mar 15, 2024",
@@ -14,7 +15,8 @@ const blogs = [
   {
     title: "Sustainable Packaging Solutions",
     image:
-      "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/post5.jpg?alt=media&token=9ba4a4a9-8ee5-4752-8104-f52312809401",
+      "https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/post5.jpg",
+      // https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/post5.jpg?alt=media&token=9ba4a4a9-8ee5-4752-8104-f52312809401
     excerpt: "Eco-friendly packaging trends shaping the future of shipping",
     date: "Mar 12, 2024",
     readTime: "4 min read"
@@ -22,7 +24,8 @@ const blogs = [
   {
     title: "Global Air Freight Challenges",
     image:
-      "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/post4.jpg?alt=media&token=0fbb1144-b88c-4750-be80-ee89d1a8d49d",
+      "https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/post4.jpg",
+      // https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/post4.jpg?alt=media&token=0fbb1144-b88c-4750-be80-ee89d1a8d49d
     excerpt: "Navigating the complexities of international air transportation",
     date: "Mar 10, 2024",
     readTime: "6 min read"
@@ -30,7 +33,8 @@ const blogs = [
   {
     title: "New Giant trucks are game changers in logistics",
     image:
-      "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/post7.jpg?alt=media&token=ae3c96b3-23b3-4bf5-9256-1f9c285d6bdd",
+      "https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/post7.jpg",
+      // https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/post7.jpg?alt=media&token=ae3c96b3-23b3-4bf5-9256-1f9c285d6bdd
     excerpt:
       "Exploring the impact of advanced trucking technology on logistics",
     date: "Mar 10, 2024",
