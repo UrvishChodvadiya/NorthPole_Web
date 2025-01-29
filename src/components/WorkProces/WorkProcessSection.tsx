@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import ProcessStep from "./ProcessStep";
 
 const steps = [
   {
@@ -8,40 +7,35 @@ const steps = [
     title: "Step 1:  Strategic Storage Solutions",
     description:
       "At NorthPole Gateway, we begin by assessing your storage needs to create a customized solution. Our flexible, secure storage options and advanced technology optimize space, inventory management, and accessibility.",
-    image:"https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/WorkP1.webp",
-      // https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/WorkP1.webp?alt=media&token=12d49599-1144-4553-808a-aaa08df6e988
-    alt: "Strategic Storage Solutions"
+    image:
+      "https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/WorkP1.webp",
+    alt: "Strategic Storage Solutions",
   },
   {
     number: 2,
     title: "Step 2: Precision Order Fulfillment",
     description:
       "Once storage is optimized, we move to the order preparation stage. At NorthPole Gateway, we ensure accurate picking, packing, and labeling of your products, using efficient processes and real-time tracking to guarantee timely and error-free order fulfillment.",
-    image:"https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/WorkP2.webp",
-      // https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/WorkP2.webp?alt=media&token=c236ffc1-0398-4059-ae2c-b974143a6c95
-    alt: "Precision Order Fulfillment"
+    image:
+      "https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/WorkP2.webp",
+    alt: "Precision Order Fulfillment",
   },
   {
     number: 3,
     title: "Step 3: Reliable Distribution Network",
     description:
       "After preparing the order, we focus on timely and secure shipping. NorthPole Gateway ensures fast, reliable delivery through trusted logistics partners, tracking shipments every step of the way to ensure your products reach their destination on time.",
-    image:"https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/WorkP3.webp",
-      // https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/WorkP3.webp?alt=media&token=1b9de38c-4054-4a90-aff2-dbaf335d2169
-    alt: "Reliable Distribution Network"
-  }
+    image:
+      "https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/WorkP3.webp",
+    alt: "Reliable Distribution Network",
+  },
 ];
 
 export default function WorkProcessSection() {
-  const [imageLoading, setImageLoading] = useState<boolean[]>(
+  const [imageLoading] = useState<boolean[]>(
     new Array(steps.length).fill(true)
   );
 
-  const handleImageLoad = (index: number) => {
-    const newLoadingState = [...imageLoading];
-    newLoadingState[index] = false;
-    setImageLoading(newLoadingState);
-  };
 
   return (
     <section
@@ -49,10 +43,9 @@ export default function WorkProcessSection() {
       style={{
         backgroundImage:
           "url('https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/bg_workprocess.jpg')",
-          // https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/bg_workprocess.jpg?alt=media&token=de050f80-b1b9-4430-bfa3-1eb64899add5
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundRepeat: "no-repeat"
+        backgroundRepeat: "no-repeat",
       }}
     >
       {/* Background Patterns */}
@@ -112,15 +105,37 @@ export default function WorkProcessSection() {
           {/* Process Steps */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 ">
             {steps.map((step, index) => (
-              <ProcessStep
-                key={index}
-                number={step.number}
-                title={step.title}
-                description={step.description}
-                image={step.image}
-                alt={step.alt}
-                onImageLoad={() => handleImageLoad(index)}
-              />
+              <div key={index} className="flex flex-col items-center shadow-lg px-2 pb-2 rounded-xl">
+                <div className="relative w-full h-64 ">
+                  {/* Skeleton Loader */}
+                  {imageLoading[index] && (
+                    <div className="absolute inset-0 bg-gray-200 animate-pulse rounded-lg"></div>
+                  )}
+                  {/* Image */}
+                  <img
+                    src={step.image}
+                    alt={step.alt}
+                    className={`w-full h-full object-cover rounded-lg transition-opacity duration-500 ${
+                      imageLoading[index] ? "opacity-0" : "opacity-100"
+                    }`}
+                    onLoad={(e) => {
+                      // Remove the skeleton loader after image is loaded
+                      (e.target as HTMLImageElement).style.opacity = "1";
+                      (e.target as HTMLImageElement).parentElement!.querySelector(
+                        ".animate-pulse"
+                      )!.remove();
+                    }}
+                    style={{ opacity: 0 }}
+                    loading="lazy"
+                  />
+                </div>
+                <div className="mt-4 ">
+                  <h3 className="lg:text-xl md:text-md text-sm font-bold text-orange-500">
+                    {step.title}
+                  </h3>
+                  <p className="text-gray-600 text-start pt-3">{step.description}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>

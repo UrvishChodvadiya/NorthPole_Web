@@ -32,20 +32,7 @@ const services = [
 export default function ServicesSection() {
   return (
     <section className="relative py-24 overflow-hidden">
-      {/* Background Pattern */}
-      {/* <div className="absolute inset-0">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              "url('https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/bg3-h6.jpg?alt=media&token=d2b58599-5e50-4c2a-82ba-86e5cd7c5800')",
-            backgroundSize: "cover",
-            backgroundPosition: "center"
-          }}
-        />
-        <div className="absolute inset-0 bg-black opacity-50" />
-      </div> */}
-
+     {/* https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/bg3-h6.jpg?alt=media&token=d2b58599-5e50-4c2a-82ba-86e5cd7c5800 */}
       {/* new */}
       <div className="absolute inset-0">
         <div

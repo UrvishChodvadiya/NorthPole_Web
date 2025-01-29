@@ -18,7 +18,7 @@ export const LinkSection: React.FC<LinkSectionProps> = ({ title, links }) => (
                 {linkText}
               </Link>
             ) : (
-              <span className="text-teal-100 cursor-pointer  hover:text-orange-500">{linkText}</span>
+              <span className="text-teal-100">{linkText}</span>
             )}
           </li>
         );

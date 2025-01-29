@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import PricingFeature from './PricingFeature';
+import { Link } from 'react-router-dom';
 
 interface PricingCardProps {
   title: string;
@@ -54,7 +55,7 @@ export default function PricingCard({ title, price, features, isPopular }: Prici
           }
         `}
       >
-        Get Started
+        <Link to ='/contactus'>Choose This</Link>
       </motion.button>
     </motion.div>
   );

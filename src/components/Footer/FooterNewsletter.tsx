@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Globe} from "lucide-react";
+import { Globe } from "lucide-react";
 import { IoSend } from "react-icons/io5";
 import emailjs from "emailjs-com";
 
@@ -13,7 +13,7 @@ export default function FooterNewsletter() {
     setLoading(true);
     // EmailJS configuration
     const serviceID = "service_3xsbzui"; // Northpolegateway email services
-    const templateID = "template_x6up23u";   
+    const templateID = "template_x6up23u";
     const userID = "CKlwW3VmCwV9Rd_te";
 
     emailjs.send(serviceID, templateID, { email }, userID).then(
@@ -42,8 +42,7 @@ export default function FooterNewsletter() {
       style={{
         backgroundImage:
           "url('https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/bg-ft.webp')"
-          // https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/bg-ft.webp?alt=media&token=2fa160c1-2710-408d-849a-8dac4e59a643
-
+        // https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/bg-ft.webp?alt=media&token=2fa160c1-2710-408d-849a-8dac4e59a643
       }}
     >
       <div className="mb-6 md:mb-0 w-full md:w-auto">
@@ -58,7 +57,7 @@ export default function FooterNewsletter() {
 
         {/* Email Subscription Form */}
         <form
-          className="flex items-center gap-2 bg-gray-200 px-4 py-1 mt-6 rounded-lg"
+          className="flex items-center gap-2 bg-gray-200 px-4 py-1 mt-6 rounded-lg md:mb-3"
           onSubmit={handleSubmit}
         >
           <label htmlFor="email" className="sr-only">
@@ -76,9 +75,10 @@ export default function FooterNewsletter() {
           />
           <button
             type="submit"
-            className="py-1 px-2 rounded-md text-white bg-orange-500 hover:bg-orange-600 transition-colors"
+            className="py-1 px-2 rounded-md text-white bg-orange-500 hover:bg-orange-600 transition-colors cursor-pointer"
             aria-label="Subscribe to newsletter"
-            disabled={loading} 
+            disabled={loading}
+            title={loading ? "Sending..." : "Email Send"}
           >
             {loading ? (
               <span>Loading...</span>

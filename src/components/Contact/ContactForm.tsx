@@ -118,9 +118,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-
-
-    <>    <form
+    <form
       className="space-y-6 bg-[#073742] p-8 rounded-lg"
       onSubmit={handleSubmit}
     >
@@ -265,8 +263,6 @@ const ContactForm: React.FC = () => {
         {isSubmitting ? "Sending..." : "Send message"}
       </button>
     </form>
-    </>
-
   );
 };
 

@@ -5,9 +5,8 @@ import { FaAward } from "react-icons/fa";
 import { Helmet } from "react-helmet";
 
 export default function AboutHero() {
-  const [content, setContent] = useState<
-    "Our Mission" | "Our Vision" | "Our Value"
-  >("Our Mission");
+  const [content, setContent] = useState<"Our Mission" | "Our Vision" | "Our Value">("Our Mission");
+  const [imageLoading, setImageLoading] = useState(true);
 
   const getContent = useCallback(() => {
     const contentMap = {
@@ -19,6 +18,10 @@ export default function AboutHero() {
     return contentMap[content];
   }, [content]);
 
+  const handleImageLoad = () => {
+    setImageLoading(false);
+  };
+
   return (
     <>
       <Helmet>
@@ -28,8 +31,7 @@ export default function AboutHero() {
       <div className="relative h-[200px] sm:h-[200px] lg:h-[300px] bg-gradient-to-r from-gray-900 to-gray-800 overflow-hidden font-poppins">
         <div className="absolute inset-0">
           <img
-            src=" https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/pricing.jpg"
-            // https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80
+            src="https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/pricing.jpg"
             alt="About Us"
             className="w-full h-full object-cover opacity-30"
           />
@@ -78,13 +80,10 @@ export default function AboutHero() {
                   <button
                     key={tab}
                     className={`text-gray-700 hover:text-orange-500 pb-2 text-lg ${
-                      content === tab &&
-                      "text-orange-500 border-b-2 border-orange-500"
+                      content === tab && "text-orange-500 border-b-2 border-orange-500"
                     }`}
                     onClick={() =>
-                      setContent(
-                        tab as "Our Mission" | "Our Vision" | "Our Value"
-                      )
+                      setContent(tab as "Our Mission" | "Our Vision" | "Our Value")
                     }
                   >
                     {tab}
@@ -93,7 +92,13 @@ export default function AboutHero() {
               </div>
 
               {/* Dynamic Content */}
-              <p className="text-gray-600 text-base mb-8">{getContent()}</p>
+              <p className="text-gray-600 text-base mb-8">
+                {imageLoading ? (
+                  <div className="w-full h-6 bg-gray-200 animate-pulse rounded-lg" />
+                ) : (
+                  getContent()
+                )}
+              </p>
             </motion.div>
 
             {/* Image Section */}
@@ -104,11 +109,15 @@ export default function AboutHero() {
               className="relative"
             >
               <div className="relative overflow-hidden aspect-square rounded-xl">
+                {imageLoading && (
+                  <div className="absolute inset-0 bg-gray-200 animate-pulse" />
+                )}
                 <img
                   src="https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/service-details-01.jpg"
-                  // https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/service-details-01.jpg?alt=media&token=d0d02953-05c4-4b3c-a0c6-3b8e80d45cb9
                   alt="Warehouse"
                   className="w-full h-full object-cover"
+                  onLoad={handleImageLoad}
+                  loading="lazy" // Lazy load image
                 />
                 <div className="absolute bottom-12 left-12 bg-white p-6 rounded-xl shadow-lg max-w-[80%] z-10 border-b-4 border-orange-500">
                   <div className="flex items-center space-x-4">

@@ -2,8 +2,28 @@ import { motion } from "framer-motion";
 import { Package, Truck } from "lucide-react";
 import AboutFeature from "./AboutFeature";
 import AboutStats from "./AboutStats";
+import { useState } from "react";
 
 export default function AboutSection() {
+  const [, setImageLoaded] = useState({
+    img1: false,
+    img2: false,
+    img3: false,
+  });
+
+  const [showImage, setShowImage] = useState({
+    img1: false,
+    img2: false,
+    img3: false,
+  });
+
+  const handleImageLoad = (key: string) => {
+    setImageLoaded((prev) => ({ ...prev, [key]: true }));
+    setTimeout(() => {
+      setShowImage((prev) => ({ ...prev, [key]: true }));
+    }, 1500); 
+  };
+
   return (
     <>
       <section className="py-24 bg-white">
@@ -47,17 +67,24 @@ export default function AboutSection() {
               <AboutStats />
             </motion.div>
 
-            {/* Image Section */}
+            {/* Image Section with Skeleton and Delay */}
             <motion.div className="relative">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-4">
                   <div className="relative">
+                    {/* Skeleton */}
+                    {!showImage.img1 && (
+                      <div className="w-full h-64 md:h-80 bg-gray-300 rounded-2xl animate-pulse absolute inset-0"></div>
+                    )}
+                    {/* Image */}
                     <img
                       src="https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/DeWatermark.ai_1736144827824+(1).png"
-                      // https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/DeWatermark.ai_1736144827824.png?alt=media&token=1a3b5a7f-3366-4bf2-a6f9-3ae254cf97cf
                       alt="Air Transport Solutions"
-                      className="rounded-2xl w-full h-64 md:h-80 object-cover"
+                      className={`rounded-2xl w-full h-64 md:h-80 object-cover transition-opacity duration-500 ${
+                        showImage.img1 ? "opacity-100" : "opacity-0"
+                      }`}
                       loading="lazy"
+                      onLoad={() => handleImageLoad("img1")}
                     />
                     <div className="absolute top-4 right-4 bg-orange-500 text-white p-4 rounded-xl shadow-lg">
                       <div className="text-4xl font-bold">01</div>
@@ -68,23 +95,40 @@ export default function AboutSection() {
                       </div>
                     </div>
                   </div>
-                  <img
-                    src="https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/DeWatermark.ai_2.png"
-                    // https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/DeWatermark.ai_1736144205189.png?alt=media&token=9827e277-8108-46d4-a347-eb2a559876d4
-                    alt="Logistics Operations"
-                    className="rounded-2xl w-full h-64 md:h-80 object-cover"
-                    loading="lazy"
-                  />
+
+                  <div className="relative">
+                    {/* Skeleton */}
+                    {!showImage.img2 && (
+                      <div className="w-full h-64 md:h-80 bg-gray-300 rounded-2xl animate-pulse absolute inset-0"></div>
+                    )}
+                    {/* Image */}
+                    <img
+                      src="https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/DeWatermark.ai_2.png"
+                      alt="Logistics Operations"
+                      className={`rounded-2xl w-full h-64 md:h-80 object-cover transition-opacity duration-500 ${
+                        showImage.img2 ? "opacity-100" : "opacity-0"
+                      }`}
+                      loading="lazy"
+                      onLoad={() => handleImageLoad("img2")}
+                    />
+                  </div>
                 </div>
 
                 {/* Large Image */}
-                <div className="mt-8">
+                <div className="mt-8 relative">
+                  {/* Skeleton */}
+                  {!showImage.img3 && (
+                    <div className="w-full h-80 md:h-full bg-gray-300 rounded-2xl animate-pulse absolute inset-0"></div>
+                  )}
+                  {/* Image */}
                   <img
                     src="https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/wmremove-transformed.jpeg"
-                    // https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/wmremove-transformed.jpeg?alt=media&token=0814e23a-86a4-411c-b671-79c0f4459c3b
                     alt="NorthPole Gateway Team"
-                    className="rounded-2xl w-full h-80 md:h-full object-cover"
+                    className={`rounded-2xl w-full h-80 md:h-full object-cover transition-opacity duration-500 ${
+                      showImage.img3 ? "opacity-100" : "opacity-0"
+                    }`}
                     loading="lazy"
+                    onLoad={() => handleImageLoad("img3")}
                   />
                 </div>
               </div>

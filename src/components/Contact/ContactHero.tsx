@@ -1,9 +1,33 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import ContactSection from "./ContactSection";
 import { ChevronRight } from "lucide-react";
 import { Helmet } from "react-helmet";
 
 const ContactHero: React.FC = () => {
+  const [isInView, setIsInView] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
     <>
       <Helmet>
@@ -11,16 +35,24 @@ const ContactHero: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative h-[200px] sm:h-[200px] lg:h-[300px] flex items-center justify-center text-white">
+      <section
+        ref={sectionRef}
+        className="relative h-[200px] sm:h-[200px] lg:h-[300px] flex items-center justify-center text-white"
+      >
         <div className="absolute inset-0 bg-gradient-to-r from-gray-900 to-gray-800 opacity-80"></div>
+
+        {/* Lazy Loading Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/mainsection_img.jpg')",
-            filter: "brightness(0.3)"
+            backgroundImage: isInView
+              ? "url('https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/mainsection_img.jpg')"
+              : "none", // Set background image only when in view
+            filter: "brightness(0.3)",
+            transition: "background-image 0.5s ease-in-out", // Smooth transition
           }}
         ></div>
-        {/* https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/photo-1600880292203-757bb62b4baf%20(1).jpg?alt=media&token=c8d3af73-ba3b-4fce-832b-5f43ad25ec31 */}
+
         <div className="relative z-10 text-center">
           <h1 className="text-5xl font-bold mb-4">Contact</h1>
           <div className="flex items-center text-gray-300 text-sm">
