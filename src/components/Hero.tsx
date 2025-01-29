@@ -18,7 +18,7 @@ export default function LoraicTransportation() {
   return (
     <>
       <Helmet>
-        <title>NorthPole Gateway - 3PL services</title>
+        <title>NorthPole Gateway - 3PL & Warehousing Solutions</title>
       </Helmet>
 
       <div className="relative bg-gradient-to-r from-teal-50 to-white overflow-hidden">
