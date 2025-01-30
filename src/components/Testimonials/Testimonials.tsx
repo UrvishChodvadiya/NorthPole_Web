@@ -7,7 +7,8 @@ import TestimonialCard from "./TestimonialCard";
 const transportModes = [
   {
     image:
-      "https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/testimony_map.png",
+    "https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/earth-Photoroom+(1).png",
+      // "https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/testimony_map.png",
       // https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/Northpole%2FDeWatermark.ai_1737094165660.png?alt=media&token=12dc9708-e0a5-40bc-bd32-1b8a1ddd1c47
     alt: "Road Transport"
   }

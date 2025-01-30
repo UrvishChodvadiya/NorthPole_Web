@@ -1,9 +1,10 @@
 import { LucideIcon } from 'lucide-react';
+import { ReactNode } from 'react';
 
 interface ContactItemProps {
   Icon: LucideIcon;
   title: string;
-  content: string;
+  content: ReactNode;
 }
 
 export const ContactItem: React.FC<ContactItemProps> = ({ Icon, title, content }) => (

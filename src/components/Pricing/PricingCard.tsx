@@ -16,7 +16,7 @@ export default function PricingCard({ title, price, features, isPopular }: Prici
       role="card"
       aria-labelledby={`pricing-card-${title}`}
       className={`
-        relative overflow-hidden rounded-2xl bg-white p-8 shadow-lg transition-shadow
+        relative overflow-hidden rounded-2xl bg-white p-7 shadow-lg transition-shadow
         hover:shadow-2xl ${isPopular ? 'border-2 border-orange-500' : ''}
         h-full flex flex-col justify-between
       `}
@@ -55,7 +55,7 @@ export default function PricingCard({ title, price, features, isPopular }: Prici
           }
         `}
       >
-        <Link to ='/contactus'>Choose This</Link>
+        <Link to ='/contactus'>Buy Now</Link>
       </motion.button>
     </motion.div>
   );

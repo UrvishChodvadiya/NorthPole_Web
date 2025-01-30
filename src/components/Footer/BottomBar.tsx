@@ -12,7 +12,7 @@ export const BottomBar: React.FC = () => (
   <div className="border-t border-gray-700 py-4 mt-8">
     <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-gray-300 text-sm">
       <span>© 2025 NorthPole Gateway / All rights reserved  &nbsp;
-       <span>Developed by <Link to="https://kailakrish.netlify.app/">Krish</Link>  & <Link to="https://dhruval-portfolio.netlify.app/">Dhruval.</Link></span>
+       {/* <span>Developed by <Link to="https://kailakrish.netlify.app/">Krish</Link>  & <Link to="https://dhruval-portfolio.netlify.app/">Dhruval.</Link></span> */}
       </span>
       <div className="flex gap-4 mt-4 md:mt-0">
         {links.map((link, index) => (

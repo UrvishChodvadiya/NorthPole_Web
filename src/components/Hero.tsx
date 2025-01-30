@@ -18,7 +18,7 @@ export default function LoraicTransportation() {
   return (
     <>
       <Helmet>
-        <title>NorthPole Gateway - 3PL & Warehousing Solutions</title>
+        <title>NorthPole Gateway - | 3PL & Warehousing Solutions</title>
       </Helmet>
 
       <div className="relative bg-gradient-to-r from-teal-50 to-white overflow-hidden">
@@ -54,7 +54,7 @@ export default function LoraicTransportation() {
                   }`}
                   onLoad={() => setImageLoaded(true)}
                 />
-                            </div>
+              </div>
 
               {/* Decorative Animated Circles */}
               <div className="absolute -right-8 -bottom-8 w-40 sm:w-48 h-40 sm:h-48 animate-spin-slow">
@@ -101,7 +101,6 @@ export default function LoraicTransportation() {
       </div>
 
       {/* main other section */}
-
       <ServicesSection />
       <AboutSection />
       <Testimonials />
