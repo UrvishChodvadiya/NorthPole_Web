@@ -63,18 +63,3 @@
     transform: rotateY(180deg);
   }
 }
-
-
-/* maps css */
-@keyframes rotate360 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.animate-rotate {
-  animation: rotate360 59s linear infinite;
-}
