@@ -25,7 +25,7 @@ export default function LoraicTransportation() {
         <div
           className="absolute inset-0 bg-cover bg-center opacity-90"
           style={{
-            backgroundImage: `url('https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/homesecond.jpg')`,
+            backgroundImage: `url('https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/Northpole%2Fhomesecond.jpg?alt=media&token=620bffc8-5742-486a-b140-b14820673c70')`,
             backgroundSize: "cover",
             backgroundPosition: "center"
           }}
@@ -47,7 +47,7 @@ export default function LoraicTransportation() {
                   <div className="w-full h-auto bg-gray-300 rounded-lg animate-pulse"></div>
                 )}
                 <img
-                  src="https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/home3.jpg"
+                  src="https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/Northpole%2Fhome3.jpg?alt=media&token=0635fe00-414a-4b90-bb14-00500d916927"
                   alt="Cargo Ship"
                   className={`rounded-lg shadow-2xl w-full h-auto opacity-75 ${
                     imageLoaded ? "block" : "hidden"

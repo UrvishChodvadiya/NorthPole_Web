@@ -31,8 +31,8 @@ export default function ServiceCard({
       <div
         className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
         style={{
-          backgroundImage: `url('https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/bg-icb.png')`,
-          // https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/bg-icb.png?alt=media&token=c58dd774-3164-41e0-835f-3c4b5569736d
+          backgroundImage: `url('https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/bg-icb.png?alt=media&token=c58dd774-3164-41e0-835f-3c4b5569736d')`,
+          // 
           backgroundSize: "cover",
           backgroundPosition: "center"
         }}

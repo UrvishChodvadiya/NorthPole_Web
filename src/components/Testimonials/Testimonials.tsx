@@ -7,9 +7,8 @@ import TestimonialCard from "./TestimonialCard";
 const transportModes = [
   {
     image:
-      "https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/earth-Photoroom+(1).png",
-    // "https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/testimony_map.png",
-    // https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/Northpole%2FDeWatermark.ai_1737094165660.png?alt=media&token=12dc9708-e0a5-40bc-bd32-1b8a1ddd1c47
+      "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/Northpole%2Fearth-Photoroom%2B(1).png?alt=media&token=1461c0fe-925d-44d3-8624-c17b5b632b54",
+
     alt: "Road Transport"
   }
 ];
@@ -51,7 +50,7 @@ export default function Testimonials() {
       className="py-24 relative overflow-hidden bg-cover bg-center"
       style={{
         backgroundImage:
-          "url('https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/bg-h6.jpg')"
+          "url('https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/bg-h6.jpg?alt=media&token=94136f7f-13dd-40e3-a836-757827503293')"
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

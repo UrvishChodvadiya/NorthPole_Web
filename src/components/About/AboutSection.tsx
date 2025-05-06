@@ -78,7 +78,7 @@ export default function AboutSection() {
                     )}
                     {/* Image */}
                     <img
-                      src="https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/DeWatermark.ai_1736144827824+(1).png"
+                      src="https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/DeWatermark.ai_1736144827824.png?alt=media&token=1a3b5a7f-3366-4bf2-a6f9-3ae254cf97cf"
                       alt="Air Transport Solutions"
                       className={`rounded-2xl w-full h-64 md:h-80 object-cover transition-opacity duration-500 ${
                         showImage.img1 ? "opacity-100" : "opacity-0"
@@ -103,8 +103,7 @@ export default function AboutSection() {
                     )}
                     {/* Image */}
                     <img
-                      src="https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/DeWatermark.ai_2.png"
-                      alt="Logistics Operations"
+                      src="https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/DeWatermark.ai_1736144205189.png?alt=media&token=9827e277-8108-46d4-a347-eb2a559876d4"
                       className={`rounded-2xl w-full h-64 md:h-80 object-cover transition-opacity duration-500 ${
                         showImage.img2 ? "opacity-100" : "opacity-0"
                       }`}
@@ -122,7 +121,7 @@ export default function AboutSection() {
                   )}
                   {/* Image */}
                   <img
-                    src="https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/wmremove-transformed.jpeg"
+                    src="https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/wmremove-transformed.jpeg?alt=media&token=0814e23a-86a4-411c-b671-79c0f4459c3b"
                     alt="NorthPole Gateway Team"
                     className={`rounded-2xl w-full h-80 md:h-full object-cover transition-opacity duration-500 ${
                       showImage.img3 ? "opacity-100" : "opacity-0"

@@ -31,8 +31,9 @@ export default function AboutHero() {
       <div className="relative h-[200px] sm:h-[200px] lg:h-[300px] bg-gradient-to-r from-gray-900 to-gray-800 overflow-hidden font-poppins">
         <div className="absolute inset-0">
           <img
-            src="https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/pricing.jpg"
+            src="https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/photo-1600880292203-757bb62b4baf%20(1).jpg?alt=media&token=c8d3af73-ba3b-4fce-832b-5f43ad25ec31"
             alt="About Us"
+            loading="lazy"
             className="w-full h-full object-cover opacity-30"
           />
         </div>
@@ -113,11 +114,11 @@ export default function AboutHero() {
                   <div className="absolute inset-0 bg-gray-200 animate-pulse" />
                 )}
                 <img
-                  src="https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/service-details-01.jpg"
+                  src="https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/service-details-01.jpg?alt=media&token=d0d02953-05c4-4b3c-a0c6-3b8e80d45cb9"
                   alt="Warehouse"
                   className="w-full h-full object-cover"
                   onLoad={handleImageLoad}
-                  loading="lazy" // Lazy load image
+                  loading="lazy" 
                 />
                 <div className="absolute bottom-12 left-12 bg-white p-6 rounded-xl shadow-lg max-w-[80%] z-10 border-b-4 border-orange-500">
                   <div className="flex items-center space-x-4">
